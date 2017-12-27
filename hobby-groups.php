@@ -18,6 +18,8 @@
     <!-- Custom styles for this template -->
     <link href="css/blog-home.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
 
   <body>
@@ -25,7 +27,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Academic Council IITGN</a>
+        <a class="navbar-brand" href="#">Student Acad-Council</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,21 +40,22 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Events</a>
+              <a class="nav-link" href="events.html">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adh-pal.php">ADH &amp; PAL</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="experiences.php">Experiences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="opinions.php">Opinions</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="#">Hobby-Groups
                <span class="sr-only">(current)</span>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Experiences</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Opinions</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="adh-pal.php">ADH &amp; PAL</a>
             </li>
           </ul>
         </div>
@@ -72,28 +75,28 @@
           <!-- Blog Post -->
           <div class="card mb-4">
             <div class="card-body">
-              <h2 class="card-title">Mathematics Hobby Group</h2>
+              <h2 class="card-title">Mathematics</h2>
               <cms:editable name='math_group' type='richtext'>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
               </cms:editable>
-              <a href="#" class="btn btn-primary">Facebook Page</a>
+              <a href="https://www.facebook.com/mathegon.28/" class="btn btn-outline-dark"><i class="fa fa-facebook-square"></i> MatheGon</a>
             </div>
             <div class="card-footer text-muted">
-              Contact Point: Amogh Parab
+              Contact Point: <a class="btn btn-info" href="mailto:parab.amogh@iitgn.ac.in">Amogh Parab</a>
             </div>
           </div>
 
           <!-- Blog Post -->
           <div class="card mb-4">
             <div class="card-body">
-              <h2 class="card-title">Economics Hobby Group</h2>
+              <h2 class="card-title">Economics</h2>
               <cms:editable name='eco_group' type='richtext'>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
               </cms:editable>
-              <a href="#" class="btn btn-primary">Facebook Page</a>
+              <!--<a href="#" class="btn btn-primary">Facebook Page</a>-->
             </div>
             <div class="card-footer text-muted">
-              Contact Point: Ayan Rakshit
+              Contact Point: <a class="btn btn-info" href="mailto:ayan.rakshit@iitgn.ac.in">Ayan Rakshit</a>
             </div>
           </div>
         </div>
@@ -128,9 +131,11 @@
             <br>
             Indian Institute of Technology Gandhinagar, 
             <br>
-        Palaj, Simkheda, Gandhinagar, Gujarat - 382355
+        Palaj, Gandhinagar, Gujarat - 382355
         <br><br>
-        <a href="http://www.iitgn.ac.in/aca-programm.htm">IIT Gandhinagar | Academics</a>
+        <a href="http://www.iitgn.ac.in/aca-programm.htm" target="_" style="color:#7fbfff !important">IIT Gandhinagar | Academics</a>
+        <br>
+        <a href="https://www.facebook.com/ranchossofiitgn/" target="_" style="color:#7fbfff !important">Ranchos of IITGN</a>
         <br><br>
         <a class="btn btn-info" href="mailto:acad.secy@iitgn.ac.in">Email: acad.secy@iitgn.ac.in</a>
         <br><br>

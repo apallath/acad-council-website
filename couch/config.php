@@ -45,7 +45,7 @@
     define( 'K_DB_USER', 'couchcms' );
     // 6.
     // Database password
-    define( 'K_DB_PASSWORD', 'wsjRst9RTwEVLbYQ' );
+    define( 'K_DB_PASSWORD', 'SVvuVgPgPaVOB9Ww' );
     // 7.
     // MySQL hostname (it will usually be 'localhost')
     define( 'K_DB_HOST', 'localhost' );

@@ -7,10 +7,10 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Website for IITGN Academic Council">
+    <meta name="description" content="Website for IITGN Student Academic Council">
     <meta name="author" content="Akash Pallath">
 
-    <title>Academic Council | IIT Gandhinagar</title>
+    <title>Student Academic Council | IIT Gandhinagar</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
@@ -25,7 +25,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Academic Council IITGN</a>
+        <a class="navbar-brand" href="#">Student Acad-Council</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,20 +38,21 @@
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="hobby-groups.php">Hobby-Groups</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Experiences</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Opinions</a>
+              <a class="nav-link" href="events.html">Events</a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="#">ADH &amp; PAL</a>
               <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="experiences.php">Experiences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="opinions.php">Opinions</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="hobby-groups.php">Hobby-Groups</a>
             </li>
           </ul>
         </div>
@@ -64,7 +65,7 @@
       <div class="row">
 
         <!-- Blog Entries Column -->
-        <div class="col-md-16">
+        <div class="col-md-12">
 
           <h1 class="my-4">ADH &amp; PAL</h1>
 
@@ -77,7 +78,7 @@
               </cms:editable>
             </div>
             <div class="card-footer text-muted">
-              Contact Point: Chitta Sai Pavan
+              Contact Point: <a class="btn btn-info" href="mailto:chitta.sai@iitgn.ac.in">Chitta Sai Pavan</a>
             </div>
           </div>
 
@@ -90,7 +91,7 @@
               </cms:editable>
             </div>
             <div class="card-footer text-muted">
-              Contact Point: Anusha Kamath
+              Contact Point: <a class="btn btn-info" href="mailto:anusha.kamath@iitgn.ac.in">Anusha Kamath</a>
             </div>
           </div>
         </div>
@@ -106,13 +107,15 @@
       <div class="container m-6 text-white">
         <div class="row">
           <div class="col-sm-6">
-            <h5>Academic Council 2017-18</h5>
+            <h5>Student Academic Council 2017-18</h5>
             <br>
             Indian Institute of Technology Gandhinagar, 
             <br>
-        Palaj, Simkheda, Gandhinagar, Gujarat - 382355
+        Palaj, Gandhinagar, Gujarat - 382355
         <br><br>
-        <a href="http://www.iitgn.ac.in/aca-programm.htm">IIT Gandhinagar | Academics</a>
+        <a href="http://www.iitgn.ac.in/aca-programm.htm" target="_" style="color:#7fbfff !important">IIT Gandhinagar | Academics</a>
+        <br>
+        <a href="https://www.facebook.com/ranchossofiitgn/" target="_" style="color:#7fbfff !important">Ranchos of IITGN</a>
         <br><br>
         <a class="btn btn-info" href="mailto:acad.secy@iitgn.ac.in">Email: acad.secy@iitgn.ac.in</a>
         <br><br>

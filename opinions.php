@@ -1,23 +1,5 @@
 <?php require_once( 'couch/cms.php' ); ?>
-<cms:template title='Post' clonable='1' commentable='1'>
-  <cms:editable name='post_summary' type='richtext'/>
-  <cms:editable name='post_content' type='richtext'/>
-  <cms:editable name='post_image'
-    crop='1'
-    width='900'
-    height='300'
-    type='image'
-  />
-  <cms:editable name='post_author' type='text'/>
-
-  <cms:folder name="event" title="Event"/>
-  <cms:folder name="intern-experience" title="Internship Experiences"/>
-  <cms:folder name="conf-workshop-experience" title="Conference/Workshop Experiences"/>
-  <cms:folder name="competition-experience" title="Competition/Contest Experiences"/>
-  <cms:folder name="other-experience" title="Other Experiences"/>
-  <cms:folder name="opinion" title="Opinion"/>
-</cms:template>
-<cms:if k_is_page>
+<cms:template title='Hobby-Groups page' />
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,17 +10,15 @@
     <meta name="description" content="Website for IITGN Academic Council">
     <meta name="author" content="Akash Pallath">
 
-    <title>Academic Council | IIT Gandhinagar</title>
+    <title>Student Academic Council | IIT Gandhinagar</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="css/round-about.css" rel="stylesheet">
-    <link href="css/material-icons-styling.css" rel="stylesheet">
+    <link href="css/blog-home.css" rel="stylesheet">
 
-    <!-- Google Material icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
 
@@ -49,7 +29,7 @@
       <div class="container">
         <a class="navbar-brand" href="#">Student Acad-Council</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
@@ -69,14 +49,19 @@
             <li class="nav-item">
               <a class="nav-link" href="experiences.php">Experiences</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="opinions.php">Opinions</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Opinions
+                <span class="sr-only">(current)</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="hobby-groups.php">Hobby-Groups</a>
+              <a class="nav-link" href="hobby-groups.php">Hobby-Groups
+               
+              </a>
             </li>
           </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Page Content -->
@@ -84,75 +69,64 @@
 
       <div class="row">
 
-        <!-- Post Content Column -->
-        <div class="col-lg-8">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
 
-          <!-- Title -->
-          <h1 class="mt-4"><cms:show k_page_title /></h1>
+          <h1 class="my-4">Opinions</h1>
 
-          <!-- Author -->
-          <p class="lead">
-            by
-            <cms:show post_author/>
-          </p>
-
-          <hr>
-
-          <!-- Date/Time -->
-          <p>Posted on <cms:show k_page_date format='jS M, y'/> &bull; <a href="#"><cms:show k_comments_count/> Comments</a></p>
-
-          <hr>
-
-          <!-- Preview Image -->
-          <img class="img-fluid rounded" src="<cms:show post_image/>" alt="">
-
-          <hr>
-
-          <!-- Post Content -->
-          <cms:show post_content/>
-
-          <hr>
-
-          <!-- Comments Form -->
-          <cms:embed 'comments.html'/>
-          <hr><br>
-
-          <!-- Single Comment -->
-          <cms:comments page_id=k_page_id order='asc'>
-          <div class="media mb-4">            
-            <img class="d-flex mr-3 rounded-circle" src="https://robohash.org/<cms:show k_comment_author_email/>.png" height='50' width='50' alt="">
-            <div class="media-body">
-              <h5 class="mt-0"><cms:show k_comment_author/></h5>
-              <cms:show k_comment/>
-              <br>
+          <cms:pages masterpage='post.php' folder='opinion' paginate='1' limit='4'>
+          <!-- Blog Post -->
+          <div class="card mb-4">
+            <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title"><cms:show k_page_title /></h2>
+              <cms:editable name='math_group' type='richtext'>
+              <p class="card-text"><cms:show post_summary/></p>
+              </cms:editable>
+              <a href="<cms:show k_page_link />" class="btn btn-outline-dark">More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              <p>Posted on <cms:show k_page_date format='jS M, y'/> by <cms:show post_author/> &bull; <cms:show k_comments_count/> Comments</p>
             </div>
           </div>
-          </cms:comments>
+
+          <!-- Pagination -->
+          <cms:if k_paginated_bottom>
+          <ul class="pagination justify-content-center mb-4">
+            <cms:if k_paginate_link_prev>
+            <li class="page-item">              
+               <a class="page-link" href="<cms:show k_paginate_link_prev/>">&larr; Previous Posts</a>
+            </li>
+            <cms:else/>
+            <li class="page-item disabled">              
+               <a class="page-link" href="#">&larr; Previous Posts</a>
+            </li>
+            </cms:if>
+            
+            <cms:if k_paginate_link_next>
+            <li class="page-item">              
+               <a class="page-link" href="<cms:show k_paginate_link_next/>">More Posts &rarr;</a>
+            </li>
+            <cms:else/>
+            <li class="page-item disabled">              
+               <a class="page-link" href="#">More Posts &rarr;</a>
+            </li>
+            </cms:if>
+          </ul>
+          </cms:if>
+          </cms:pages>
+
 
         </div>
 
         <!-- Sidebar Widgets Column -->
         <div class="col-md-4">
 
-          <cms:if k_page_foldertitle>
-            <cms:set my_category=k_page_foldertitle/>
-          <cms:else/>
-            <cms:set my_category='Uncategorized'/>
-          </cms:if>
-
-          <!-- Categories Widget -->
-          <div class="card my-4">
-            <h5 class="card-header">Category</h5>
-            <div class="card-body">
-            <cms:show my_category/>
-            </div>
-          </div>
-
           <!-- Side Widget -->
           <div class="card my-4">
-            <h5 class="card-header">Summary</h5>
+            <h5 class="card-header">What's this about?</h5>
             <div class="card-body">
-              <cms:show post_summary/>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!
             </div>
           </div>
 
@@ -164,6 +138,7 @@
     </div>
     <!-- /.container -->
 
+    <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container m-6 text-white">
         <div class="row">
@@ -196,5 +171,5 @@
 
   </body>
 </html>
-</cms:if>
 <?php COUCH::invoke(); ?>
+
